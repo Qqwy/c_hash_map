@@ -11,7 +11,7 @@ Virtually anything can be stored inside, as void-pointers are used as both key- 
 
 ## Usage
 
-1. The library is included by including the `hash_map.h` header.
+1. The library is included by including the `hash_map/hash_map.h` header.
 2. Allocate a HashMap with the desired capacity (expected size) using `HashMap hash_map = HashMap_new(capacity)`.
 3. Add elements using `HashMap_insert(&hash_map, key, value)`. This call might resize the HashMap to a larger one.
 4. Search for an element using `HashMap_lookup(hash_map, key)`. `NULL` will be returned if the key is not inside the table.

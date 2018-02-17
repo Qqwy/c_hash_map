@@ -2,7 +2,6 @@
 
 void _HashMap_resize(HashMap **hash_map_ref) {
   HashMap *hash_map = *hash_map_ref;
-  printf("Resizing HashMap...\n");
   HashMap *larger_table = HashMap_new(hash_map->capacity << 1);
   for(size_t iter_index = 0; iter_index < hash_map->capacity; ++iter_index) {
     if(hash_map->keys[iter_index] != NULL){
@@ -11,5 +10,4 @@ void _HashMap_resize(HashMap **hash_map_ref) {
   }
   *hash_map_ref = larger_table;
   HashMap_destroy(hash_map);
-  printf("Finished Resizing HashMap.\n");
 }
